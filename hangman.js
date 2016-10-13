@@ -83,6 +83,12 @@ app.controller('rootctrl', function($scope, $http)
                 return;
             }
 
+        if($scope.letter_object_array == undefined)
+        {
+            window.alert("You do not have a word yet!\nPress button 'Get New Word' to begin.");
+            return;
+        }
+
        //console.log("letter is " + letter);
 
        var valid_letter = false;
