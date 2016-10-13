@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" ng-app="myapp">
+
+<head>
+    <title>Words Will Kill You</title>
+
+    <!--Angular CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="hangman.css">
+
+</head>
+
+<body ng-controller="rootctrl">
+
+<button type="button" id="reset_button" class = "btn btn-danger" ng-click="getword()">Get New Word</button>
+
+    <!--hangman section goes here-->
+    <h1 id = "player_name" class="text-center" ng-bind="playername">Player</h1>
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <img id="noose" ng-src= {{current_hangman.image}} alt= {{current_hangman.alt}}>
+            <br>
+            
+            <div class="text-center" id="mystery_word">
+                <span ng-repeat="i in letter_object_array track by $index">{{i | undiscovered}}</span> <!--Will add filter for making letters underscores later. (| undiscovered)-->
+            </div>
+
+            <br>
+            <br>
+
+        <div class="text-center">
+            <!--Letters to choose for the word. When clicked, the input function is called to process the letter.-->
+            <span ng-click="input('a')" class="letter_choice">A</span>  <span ng-click="input('b')" class="letter_choice">B</span>  <span ng-click="input('c')" class="letter_choice">C</span>  
+            <span ng-click="input('d')" class="letter_choice">D</span>  <span ng-click="input('e')" class="letter_choice">E</span>  <span ng-click="input('f')" class="letter_choice">F</span>  
+            <span ng-click="input('g')" class="letter_choice">G</span>  <span ng-click="input('h')" class="letter_choice">H</span>  <span ng-click="input('i')" class="letter_choice">I</span>  
+            <span ng-click="input('j')" class="letter_choice">J</span>  <span ng-click="input('k')" class="letter_choice">K</span>  <span ng-click="input('l')" class="letter_choice">L</span>  
+            <span ng-click="input('m')" class="letter_choice">M</span>  <span ng-click="input('n')" class="letter_choice">N</span>  <span ng-click="input('o')" class="letter_choice">O</span>
+            <span ng-click="input('p')" class="letter_choice">P</span>  <span ng-click="input('q')" class="letter_choice">Q</span>  <span ng-click="input('r')" class="letter_choice">R</span>  
+            <span ng-click="input('s')" class="letter_choice">S</span>  <span ng-click="input('t')" class="letter_choice">T</span>  <span ng-click="input('u')" class="letter_choice">U</span>  
+            <span ng-click="input('v')" class="letter_choice">V</span>  <span ng-click="input('w')" class="letter_choice">W</span>  <span ng-click="input('x')" class="letter_choice">X</span>  
+            <span ng-click="input('y')" class="letter_choice">Y</span>  <span ng-click="input('z')" class="letter_choice">Z</span>
+        </div>
+
+        </div>
+
+        <!--Weather Stuff goes here
+        <div class="col-sm-4" id="random_stuff">
+            weather API will go here.
+        </div>
+        -->
+
+    </div>
+    </div>
+    <script src="hangman.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+   <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+</html>

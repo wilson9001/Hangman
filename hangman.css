@@ -1,0 +1,32 @@
+.letter_choice
+{
+    font-size : 5em;
+
+    color : red;
+
+    cursor : crosshair;
+
+    margin-left : .5em;
+}
+
+#mystery_word
+{
+    font-size : 5em;
+
+    color : green;
+}
+
+#reset_button
+{
+    display : block;
+    margin-left : auto;
+    margin-right : auto;
+    margin-top : 2em;
+}
+
+#noose
+{
+    display : block;
+    margin-left : auto;
+    margin-right : auto;
+}
