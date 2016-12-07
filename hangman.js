@@ -1,6 +1,6 @@
 //URL to use for random word API = http://www.setgetgo.com/randomword/get.php?len=20
 
-var player_input = window.prompt("Please enter your name:");
+//var player_input = window.prompt("Please enter your name:");
 
 var hangman_state = 0;
 
@@ -35,7 +35,7 @@ app.filter('undiscovered', function()
 app.controller('rootctrl', function($scope, $http)
 {//-[]
 
-    $scope.playername = player_input;
+    //$scope.playername = player_input;
 
     //$scope.current_hangman1 = current_hangman;
 
@@ -79,7 +79,7 @@ app.controller('rootctrl', function($scope, $http)
     {
         if(hangman_state == 7)
             {
-                window.alert("GAME OVER.\nTry again by pressing button 'Get New Word'.");
+                //window.alert("GAME OVER.\nTry again by pressing button 'Get New Word'.");
                 return;
             }
 
@@ -117,7 +117,7 @@ app.controller('rootctrl', function($scope, $http)
 
             if(hangman_state == 7)
             {
-                window.alert("GAME OVER.\nTry again by pressing button 'Get New Word'.");
+                //window.alert("GAME OVER.\nTry again by pressing button 'Get New Word'.");
             }
         }
       // $scope.current_hangman = { "image" : "hangman" + hangman_state + ".png" , "alt" : hangman_alt[hangman_state] };
